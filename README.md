@@ -34,30 +34,31 @@ The system is tested within an algebraic-loop-free **Simulink Software-in-the-Lo
 
 ## Quantitative Benchmarks (LQR vs. Constrained MPC)
 
-| Metric                                 | Target Specification | Unconstrained LQR       | Constrained MPC          | Result                          |
-| :------------------------------------- | :------------------- | :---------------------- | :----------------------- | :------------------------------ | ----------------------------------------- | ----------------------------- |
-| \*\*Rail Constraint ($                 | x                    | \le 0.65\text{ m}$)\*\* | Zero Violation           | $0.682\text{ m}$ (**VIOLATED**) | $\mathbf{0.581\text{ m}}$ (**COMPLIANT**) | **MPC avoids rail collision** |
-| \*\*Angle Settling Time ($             | \theta               | < 0.1^\circ$)\*\*       | $< 1.0\text{ s}$         | $0.62\text{ s}$                 | $\mathbf{0.58\text{ s}}$                  | **PASSED**                    |
-| **Cart Settling Time ($t_s \pm 2\%$)** | $< 2.5\text{ s}$     | $1.41\text{ s}$         | $\mathbf{1.32\text{ s}}$ | **PASSED**                      |
-| **EKF Position Estimation RMSE**       | $< 5.0\text{ mm}$    | $1.82\text{ mm}$        | $1.82\text{ mm}$         | **PASSED**                      |
-| **EKF Angle Estimation RMSE**          | $< 0.50^\circ$       | $0.084^\circ$           | $0.084^\circ$            | **PASSED**                      |
-
+| Metric | Target Specification | Unconstrained LQR | Constrained MPC | Result |
+| :--- | :--- | :--- | :--- | :--- |
+| **Rail Constraint ($\lvert x \rvert \le 0.65\text{ m}$)** | Zero Violation | $0.682\text{ m}$ (**VIOLATED**) | $\mathbf{0.581\text{ m}}$ (**COMPLIANT**) | **MPC avoids rail collision** |
+| **Angle Settling Time ($\lvert \theta \rvert < 0.1^\circ$)** | $< 1.0\text{ s}$ | $0.62\text{ s}$ | $\mathbf{0.58\text{ s}}$ | **PASSED** |
+| **Cart Settling Time ($t_s \pm 2\%$)** | $< 2.5\text{ s}$ | $1.41\text{ s}$ | $\mathbf{1.32\text{ s}}$ | **PASSED** |
+| **EKF Position Estimation RMSE** | $< 5.0\text{ mm}$ | $1.82\text{ mm}$ | $1.82\text{ mm}$ | **PASSED** |
+| **EKF Angle Estimation RMSE** | $< 0.50^\circ$ | $0.084^\circ$ | $0.084^\circ$ | **PASSED** |
 ---
 
 ## Repository Structure
 
-├── README.md # Executive project overview and benchmark table
-├── Technical_Report.md # Comprehensive mathematical whitepaper
-├── system_params.m # Plant parameters, Jacobian matrices, CARE solver
-├── nonlinear_dynamics.m # Vectorized exact non-linear ODEs
-├── ekf_observer.m # Continuous-discrete EKF function
-├── mpc_controller.m # Constrained QP receding-horizon solver
-├── run_sil_simulation.m # Standalone non-linear LQR simulation script
-├── run_ekf_lqr_simulation.m # Closed-loop non-linear plant + EKF + LQR runner
-├── run_mpc_vs_lqr_benchmark.m # Head-to-head MPC vs. LQR benchmark suite
-├── build_simulink_model.m # Programmatic Simulink model builder
-├── inverted_pendulum_digital_twin.slx # Multi-rate Simulink SIL harness
-└── run_simulink_verification.m # Automated test execution and plotting script
+```text
+├── README.md                          # Executive project overview and benchmark table
+├── Technical_Report.md                # Comprehensive mathematical whitepaper
+├── system_params.m                    # Plant parameters, Jacobian matrices, CARE solver
+├── nonlinear_dynamics.m               # Vectorized exact non-linear ODEs
+├── ekf_observer.m                     # Continuous-discrete EKF function
+├── mpc_controller.m                   # Constrained QP receding-horizon solver
+├── run_sil_simulation.m               # Standalone non-linear LQR simulation script
+├── run_ekf_lqr_simulation.m           # Closed-loop non-linear plant + EKF + LQR runner
+├── run_mpc_vs_lqr_benchmark.m         # Head-to-head MPC vs. LQR benchmark suite
+├── build_simulink_model.m             # Programmatic Simulink model builder
+├── inverted_pendulum_digital_twin.slx  # Multi-rate Simulink SIL harness
+└── run_simulink_verification.m        # Automated test execution and plotting script
+```
 
 ---
 
