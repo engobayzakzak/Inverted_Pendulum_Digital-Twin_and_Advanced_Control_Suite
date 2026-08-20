@@ -200,7 +200,7 @@ Because angular and linear velocities are not measured directly, and sensor meas
 
 Continuous process noise $\mathbf{w}(t) \sim \mathcal{N}(\mathbf{0}, \mathbf{Q}_c)$ and discrete sensor noise $\mathbf{v}_k \sim \mathcal{N}(\mathbf{0}, \mathbf{R}_d)$:
 $$\mathbf{Q}_d = \text{diag}([10^{-6}, 10^{-4}, 7.6 \times 10^{-7}, 7.6 \times 10^{-5}])$$
-$$\mathbf{R}_d = \text{diag}([\sigma_x^2, \sigma_\theta^2]) = \text{diag}([2.5 \times 10^{-5}, 3.7 \times 10^{-5}])$$
+$\mathbf{R}_d = \operatorname{diag}(\sigma_x^2, \sigma_\theta^2) = \operatorname{diag}(2.5 \times 10^{-5}, 3.7 \times 10^{-5})$
 
 ### 5.2 Algorithm Execution
 
