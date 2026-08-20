@@ -237,15 +237,15 @@ The controllers were benchmarked under identical conditions: an initial pendulum
 
 ### Table 2: Performance & Robustness Metrics
 
-| Performance Metric                     | Design Target                  | Linear Quadratic Regulator (LQR) | Constrained MPC                           | Evaluation Status                 |
-| :------------------------------------- | :----------------------------- | :------------------------------- | :---------------------------------------- | :-------------------------------- | ---------------------------------- | ------------------------ |
-| **Max Cart Displacement ($x_{\max}$)** | $< 0.65\text{ m}$ (Rail limit) | $0.682\text{ m}$ (**VIOLATED**)  | $\mathbf{0.581\text{ m}}$ (**COMPLIANT**) | MPC avoids track crash            |
-| **Rail Constraint Violation**          | $0.0\text{ mm}$                | $+32.0\text{ mm}$ excursion      | $\mathbf{0.0\text{ mm}}$                  | MPC respects hard boundaries      |
-| \*\*Angle Settling Time ($             | \theta                         | < 0.1^\circ$)\*\*                | $< 1.0\text{ s}$                          | $0.62\text{ s}$                   | $\mathbf{0.58\text{ s}}$           | Both stable              |
-| **Cart Settling Time ($t_s \pm 2\%$)** | $< 2.5\text{ s}$               | $1.41\text{ s}$                  | $\mathbf{1.32\text{ s}}$                  | Deadbeat recovery                 |
-| \*\*Peak Control Effort ($             | F                              | \_{\max}$)\*\*                   | $\le 20.0\text{ N}$                       | $20.0\text{ N}$ (Saturated)       | $\mathbf{19.4\text{ N}}$ (Optimal) | Saturated vs. Pre-shaped |
-| **EKF Position RMSE**                  | $< 5\text{ mm}$                | $1.82\text{ mm}$                 | $1.82\text{ mm}$                          | $3\sigma$ consistency verified    |
-| **EKF Angle RMSE**                     | $< 0.5^\circ$                  | $0.084^\circ$                    | $0.084^\circ$                             | Noise reduced by $18.4\text{ dB}$ |
+| Performance Metric | Design Target | Linear Quadratic Regulator (LQR) | Constrained MPC | Evaluation Status |
+| :--- | :--- | :--- | :--- | :--- |
+| **Max Cart Displacement ($x_{\max}$)** | $< 0.65\text{ m}$ (Rail limit) | $0.682\text{ m}$ (**VIOLATED**) | $\mathbf{0.581\text{ m}}$ (**COMPLIANT**) | MPC avoids track crash |
+| **Rail Constraint Violation** | $0.0\text{ mm}$ | $+32.0\text{ mm}$ excursion | $\mathbf{0.0\text{ mm}}$ | MPC respects hard boundaries |
+| **Angle Settling Time ($\lvert \theta \rvert < 0.1^\circ$)** | $< 1.0\text{ s}$ | $0.62\text{ s}$ | $\mathbf{0.58\text{ s}}$ | Both stable |
+| **Cart Settling Time ($t_s \pm 2\%$)** | $< 2.5\text{ s}$ | $1.41\text{ s}$ | $\mathbf{1.32\text{ s}}$ | Deadbeat recovery |
+| **Peak Control Effort ($\lvert F_{\max} \rvert$)** | $\le 20.0\text{ N}$ | $20.0\text{ N}$ (Saturated) | $\mathbf{19.4\text{ N}}$ (Optimal) | Saturated vs. Pre-shaped |
+| **EKF Position RMSE** | $< 5\text{ mm}$ | $1.82\text{ mm}$ | $1.82\text{ mm}$ | $3\sigma$ consistency verified |
+| **EKF Angle RMSE** | $< 0.5^\circ$ | $0.084^\circ$ | $0.084^\circ$ | Noise reduced by $18.4\text{ dB}$ |
 
 ---
 
