@@ -1,10 +1,5 @@
 # Mathematical Modeling, Stochastic State Estimation (EKF), and Optimal Multivariable Control (LQR vs. Constrained MPC) of an Inverted Pendulum Digital Twin
 
-**Author:** Mechatronics Engineering Candidate  
-**Specialization:** Dynamic Systems, Stochastic Estimation & Advanced Control Theory  
-**Target Applications:** Master of Science Admissions (Robotics / Control Systems) & Industrial Control R&D  
-**Simulation Platform:** MATLAB R2024b / Simulink (Software-in-the-Loop SIL Architecture)
-
 ---
 
 ## Executive Abstract
@@ -21,7 +16,7 @@ The system consists of a rigid cart of mass $M$ translating horizontally along a
 
              ▲ y
              │
-             │        ● Bob / Rod COM (m, I)
+             │        ● Rod COM (m, I)
              │       /
              │      /
              │     /  Length = l
