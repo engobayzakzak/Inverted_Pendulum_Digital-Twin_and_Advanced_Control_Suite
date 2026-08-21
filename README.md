@@ -2,9 +2,8 @@
 
 > **Software-in-the-Loop (SIL) Mathematical Simulation, Extended Kalman Filter (EKF) State Observer, and LQR vs. Constrained Model Predictive Control (MPC) in MATLAB & Simulink.**
 
-[![MATLAB](https://img.shields.io/badge/MATLAB-R2024b-orange.svg)](https://www.mathworks.com/)
+[![MATLAB](https://img.shields.io/badge/MATLAB-R2022a-orange.svg)](https://www.mathworks.com/)
 [![Simulink](https://img.shields.io/badge/Simulink-SIL%20Architecture-blue.svg)](https://www.mathworks.com/products/simulink.html)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 ---
 
@@ -66,7 +65,7 @@ The system is tested within an algebraic-loop-free **Simulink Software-in-the-Lo
 
 ### Requirements
 
-- MATLAB R2022b or later
+- MATLAB R2022a or later
 - Simulink
 - Control System Toolbox
 - Optimization Toolbox (for `quadprog` in MPC)
